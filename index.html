@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Countdown Timer</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: black;
-      color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-    .countdown {
-      font-size: 3em;
-    }
-    .label {
-      font-size: 0.5em;
-      display: block;
-      color: gray;
-    }
-    .time-box {
-      margin: 0 15px;
-      display: inline-block;
-    }
-  </style>
-</head>
-<body>
-  <div class="countdown" id="countdown">
-    <div class="time-box">
-      <span id="days">--</span>
-      <span class="label">Days</span>
-    </div>
-    <div class="time-box">
-      <span id="hours">--</span>
-      <span class="label">Hours</span>
-    </div>
-    <div class="time-box">
-      <span id="minutes">--</span>
-      <span class="label">Minutes</span>
-    </div>
-    <div class="time-box">
-      <span id="seconds">--</span>
-      <span class="label">Seconds</span>
-    </div>
-  </div>
-
-  <script>
-    const countdown = () => {
-      const now = new Date().getTime();
-      const year = new Date().getFullYear();
-      const targetDate = new Date(`June 27, ${year} 00:00:00`).getTime();
-
-      const distance = targetDate - now;
-
-      if (distance <= 0) {
-        document.getElementById("countdown").innerHTML = "🎉 It's June 27!";
-        return;
+  <head>
+    <meta charset="UTF-8" />
+    <title>Countdown Timer</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
       }
+      .countdown {
+        font-size: 5em;
+      }
+      .label {
+        font-size: 0.15em;
+        display: block;
+        color: gray;
+      }
+      .time-box {
+        font-size: 1.5em;
+        margin: 0 15px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="countdown" id="countdown">
+      <div class="time-box">
+        <span id="days">--</span>
+        <span class="label">Days</span>
+      </div>
+      <div class="time-box">
+        <span id="hours">--</span>
+        <span class="label">Hours</span>
+      </div>
+      <div class="time-box">
+        <span id="minutes">--</span>
+        <span class="label">Minutes</span>
+      </div>
+      <div class="time-box">
+        <span id="seconds">--</span>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    <script>
+      const countdown = () => {
+        const now = new Date().getTime();
+        const year = new Date().getFullYear();
+        const targetDate = new Date(`June 27, ${year} 00:00:00`).getTime();
+        //   const targetDate = new Date(`June 27, ${year} 00:00:00`).getTime();
 
-      document.getElementById("days").innerText = days;
-      document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes").innerText = minutes;
-      document.getElementById("seconds").innerText = seconds;
-    };
+        const distance = targetDate - now;
 
-    countdown(); // initial call
-    setInterval(countdown, 1000);
-  </script>
-</body>
+        if (distance <= 0) {
+          document.getElementById("countdown").innerHTML =
+            "Happy Birthday dear 🎉<br>😘🥰🎂";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+      };
+
+      countdown(); // initial call
+      setInterval(countdown, 1000);
+    </script>
+  </body>
 </html>

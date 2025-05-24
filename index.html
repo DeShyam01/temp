@@ -2,84 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Countdown Timer</title>
-    <style>
-      body {
-        margin: 0;
-        background-color: black;
-        color: white;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-      }
-      .countdown {
-        font-size: 4.3vh;
-      }
-      .label {
-        font-size: 1.5vh;
-        display: block;
-        color: gray;
-      }
-      .time-box {
-        font-size: 6.2vh;
-        margin: 0 15px;
-        display: inline-block;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <title>Document</title>
   </head>
   <body>
-    <div class="countdown" id="countdown">
-      <div class="time-box">
-        <span id="days">--</span> :
-        <span class="label">Days</span>
-      </div>
-      <div class="time-box">
-        <span id="hours">--</span> :
-        <span class="label">Hours</span>
-      </div>
-      <div class="time-box">
-        <span id="minutes">--</span> :
-        <span class="label">Minutes</span>
-      </div>
-      <div class="time-box">
-        <span id="seconds">--</span>
-        <span class="label">Seconds</span>
-      </div>
+    <div class="container">
+      <h1>Login</h1>
+      <form action="/login" method="post">
+        <input type="text" id="username" name="username" placeholder="username" required />
+        <br />
+        <input type="password" id="password" name="password" placeholder="password" required />
+        <br />
+        <button type="submit">Login</button>
+      </form>
     </div>
-
-    <script>
-      const countdown = () => {
-        const now = new Date().getTime();
-        const year = new Date().getFullYear();
-        const targetDate = new Date(`May 24, ${year} 01:32:00`).getTime();
-        //   const targetDate = new Date(`June 27, ${year} 00:00:00`).getTime();
-
-        const distance = targetDate - now;
-
-        if (distance <= 0) {
-          document.getElementById("countdown").innerHTML =
-            "Happy Birthday dear 🎉<br>😘🥰🎂";
-          return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("days").innerText = days;
-        document.getElementById("hours").innerText = hours;
-        document.getElementById("minutes").innerText = minutes;
-        document.getElementById("seconds").innerText = seconds;
-      };
-
-      countdown(); // initial call
-      setInterval(countdown, 1000);
-    </script>
   </body>
 </html>

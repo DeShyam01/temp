@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieVerse</title>
+  <link rel="stylesheet" href="ktj.css" />
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">MovieVerse</div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">☰</label>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#trending">Trending</a>
+      <a href="#shows">Popular Shows</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-left">
+      <h1>MovieVerse</h1>
+      <p>Discover Your Next Favorite Film</p>
+      <a href="#trending" class="btn">Explore Trending</a>
+    </div>
+    <div class="hero-right">
+      <div class="svg-animation">🍿</div>
+    </div>
+  </section>
+
+  <!-- Trending Movies -->
+  <section id="trending" class="section">
+    <h2>Trending Movies</h2>
+    <p class="subtitle">Handpicked hits you shouldn't miss</p>
+    <div class="card-container">
+      <!-- Repeat this card for each movie -->
+      <div class="card">
+        <img src="movie1.jpg" alt="Movie Title" />
+        <div class="card-content">
+          <h3>Movie One</h3>
+          <p>Exciting adventure through time.</p>
+          <span class="duration">2h 14m</span>
+        </div>
+        <div class="card-overlay">
+          <a href="#" class="watch-btn">Watch Now</a>
+          <button class="toggle-btn">+</button>
+        </div>
+      </div>
+      <!-- Add more cards similarly -->
+    </div>
+  </section>
+
+  <!-- Popular Shows -->
+  <section id="shows" class="section">
+    <h2>Popular Shows</h2>
+    <p class="subtitle">Binge-worthy stories and series</p>
+    <div class="card-container">
+      <div class="card">
+        <img src="show1.jpg" alt="Show Title" />
+        <div class="card-content">
+          <h3>Show One</h3>
+          <p>Drama | 3 Seasons | 24 Episodes</p>
+          <p class="synopsis">A tale of love, betrayal, and redemption.</p>
+          <label for="modal1" class="learn-more">Learn More</label>
+        </div>
+      </div>
+    </div>
+    <input type="checkbox" id="modal1" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-content">
+        <label for="modal1" class="close">×</label>
+        <h3>Show One</h3>
+        <p>Full synopsis, awards, and more info here.</p>
+        <a href="#" class="btn">Watch Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Reviews -->
+  <section id="reviews" class="section">
+    <h2>User Reviews</h2>
+    <p class="subtitle">What our users say</p>
+    <div class="reviews-container">
+      <div class="review-card">
+        <img src="user1.jpg" alt="User" />
+        <h4>Jane Doe</h4>
+        <p>Absolutely loved it! A must-watch.</p>
+      </div>
+      <div class="review-card">
+        <img src="user2.jpg" alt="User" />
+        <h4>John Smith</h4>
+        <p>Great recommendations, slick UI!</p>
+      </div>
+    </div>
+    <form class="review-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your review" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="socials">
+      <a href="#" target="_blank">📸</a>
+      <a href="#" target="_blank">🐦</a>
+      <a href="#" target="_blank">📘</a>
+    </div>
+    <div class="footer-links">
+      <a href="https://example.com/tc" target="_blank">Terms</a>
+      <a href="https://example.com/privacy" target="_blank">Privacy</a>
+    </div>
+    <a href="#hero" class="back-to-top">↑ Top</a>
+  </footer>
+</body>
+</html>

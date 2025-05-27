@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">MovieMania</div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#trending">Trending</a>
+        <a href="#shows">Popular Shows</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+    </header>
+
+    <section id="hero" class="hero">
+      <div class="hero-left">
+        <h1>MovieMania</h1>
+        <p>Where best movies finds you</p>
+        <a href="#trending" class="btn">Explore Trending</a>
+      </div>
+      <div class="hero-right">
+        <div class="svg-animation"></div>
+      </div>
+    </section>
+    <section id="trending" class="section">
+      <h2>Trending Shows</h2>
+      <p class="subtitle">Handpicked hits you shouldn't miss</p>
+      
+      <div class="card-container">
+        <div class="card" id="show1">
+          <img src="show1.jpg" />
+          <div class="card-content">
+            <h3>Superman Legacy</h3>
+            <p>Superman balances alien heritage and humanity to protect Earth’s future.</p>
+            <span class="duration">2h 2m</span>
+          </div>
+          <div class="card-overlay">
+            <a href="#" class="watch-btn">Watch Now</a>
+            <button class="toggle-btn">+</button>
+          </div>
+        </div>
+
+        <div class="card" id="show2">
+          <img src="show2.jpg" />
+          <div class="card-content">
+            <h3>Avatar 3</h3>
+            <p>Jake and Neytiri confront fiery Ash People amid turmoil.</p>
+            <span class="duration">3h 12m</span>
+          </div>
+          <div class="card-overlay">
+            <a href="#" class="watch-btn">Watch Now</a>
+            <button class="toggle-btn">+</button>
+          </div>
+        </div>
+
+        <div class="card" id="show3">
+          <img src="show3.jpg" />
+          <div class="card-content">
+            <h3>Lost Ladies</h3>
+            <p>Two veiled brides are accidentally swapped during a train ride.</p>
+            <span class="duration">2h 4m</span>
+          </div>
+          <div class="card-overlay">
+            <a href="#" class="watch-btn">Watch Now</a>
+            <button class="toggle-btn">+</button>
+          </div>
+        </div>
+        <div class="card" id="show4">
+          <img src="show4.jpg" />
+          <div class="card-content">
+            <h3>Black Adam</h3>
+            <p>Ancient antihero Black Adam awakens, dispensing his unique justice.</p>
+            <span class="duration">2h 5m</span>
+          </div>
+          <div class="card-overlay">
+            <a href="#" class="watch-btn">Watch Now</a>
+            <button class="toggle-btn">+</button>
+          </div>
+        </div>
+        <div class="card" id="show5">
+          <img src="show5.jpg" />
+          <div class="card-content">
+            <h3>Battlefield 2025</h3>
+            <p>Campers and fugitives unite against an alien threat in Arizona.</p>
+            <span class="duration">1h 25m</span>
+          </div>
+          <div class="card-overlay">
+            <a href="#" class="watch-btn">Watch Now</a>
+            <button class="toggle-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="card-container">
+        <div class="card" id="movie1">
+          <img src="movie1.jpg" />
+        </div>
+        <div class="card" id="movie2">
+          <img src="movie2.jpg" />
+        </div>
+        <div class="card" id="movie3"><img src="movie3.jpg" /></div>
+        <div class="card" id="movie4"><img src="movie4.jpg" /></div>
+        <div class="card" id="movie5"><img src="movie5.jpg" /></div>
+      </div> -->
+      <!-- Repeat more cards similarly -->
+    </section>
+  </body>
+</html>

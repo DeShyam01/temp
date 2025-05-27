@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   z-index: 1000;
 }
 
@@ -41,9 +41,10 @@ body {
   color: #ff9800;
   border-radius: 5px;
 }
+
 .menu-toggle {
-    display: none;
-  }
+  display: none;
+}
 @media (min-width: 425px) {
   .hamburger,
   .menu-toggle {
@@ -71,15 +72,16 @@ body {
 }
 
 /* Hero section */
-.hero{
+.hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
   padding: 6rem 2rem 4rem;
+  background-color: rgb(255, 243, 222);
 }
 
-.hero .hero-left h1{
+.hero .hero-left h1 {
   font-size: 4rem;
   font-weight: bold;
   color: #333;
@@ -87,7 +89,7 @@ body {
 
 .hero .hero-left p {
   font-size: 1.5rem;
-  color: #555;
+  color: #111111;
   margin: 1rem 0;
 }
 
@@ -103,13 +105,32 @@ body {
 
 .hero .hero-left a:hover {
   background: #e68900;
+  transform: scale(1.05);
 }
 
 .hero .hero-right .svg-animation {
-  font-size: 5rem;
+  width: 130px;
+  height: 100px;
+  background-image: url("https://www.svgrepo.com/show/315885/movie-ticket.svg");
+  background-size: contain; /* Scale to fit the box */
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: float 3s ease-in-out infinite;
 }
 
-@media(max-width: 768px) {
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }  
+}
+
+@media (max-width: 768px) {
   .hero {
     flex-direction: column;
     text-align: center;

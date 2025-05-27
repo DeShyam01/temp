@@ -42,6 +42,10 @@ body {
   border-radius: 5px;
 }
 
+.dark-mode-label{
+  padding: 8px;
+}
+
 .dark-mode-label::after {
   content: "🌙";
 }

@@ -665,6 +665,11 @@ html:has(#toggle-dark-mode:checked) {
   padding: 1rem;
 }
 
+.user-reviews{
+  display: flex;
+  flex-direction: row;
+}
+
 .review-card{
   display: flex;
   flex-direction: column;
@@ -672,21 +677,43 @@ html:has(#toggle-dark-mode:checked) {
   background-color: rgb(245, 244, 244,0.6);
   width: auto;
   max-width: 150px;
-  border: 1px solid #333232;
+  box-shadow: 2px 4px 4px #222;
   border-radius: 8px;
-  padding: 0.5rem;
-  margin: 0 0.5rem;
+  margin: 1rem 0.5rem;
 }
 
 .review-card img {
-  max-width: 250px;
+  max-width: 200px;
   max-height: 250px;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.review-card h4, .review-card p{
+  /* padding: 0.5rem; */
+  margin: 0.5rem;
 }
 
 @media (max-width: 768px){
   .review-container{
     display: flex;
-    margin: 1.5rem;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .review-card{
+    max-width: 120px;
+  }
+
+  /* .review-form{
+    margin: 0.5rem;
+    height: 250px;
+  } */
+
+  .review-form input{
+    margin: 0.5rem;
+  }
+
+  textarea{
+    position: relative;
+    left: 3%;
   }
 }

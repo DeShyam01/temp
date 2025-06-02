@@ -158,6 +158,13 @@ body {
   padding: 8px;
 }
 
+@media (min-width: 1024px) {
+  .hamburger,
+  .menu-toggle {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar nav {
     display: none;

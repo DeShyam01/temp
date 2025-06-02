@@ -86,101 +86,6 @@ html:has(#toggle-dark-mode:checked) {
   }
 }
 
-/* for watchlist buttons default */
-
-.toggle-btn-label::after {
-  content: "+";
-}
-
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-  background-color: #fff7eb;
-}
-
-/* navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #111;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  z-index: 1000;
-}
-
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background: linear-gradient(135deg, orange, orangered, orangered);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 0.4rem;
-}
-
-.navbar a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ff9800;
-  border-radius: 5px;
-}
-
-.dark-mode-label:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ff9800;
-  border-radius: 5px;
-}
-
-.dark-mode-label::after {
-  /* content: "🌙"; */
-  content: "Dark";
-}
-
-#toggle-dark-mode:checked + .dark-mode-label::after {
-  /* content: "☀️"; */
-  content: "Light";
-}
-
-.menu-toggle,
-.toggle-dark-mode {
-  display: none;
-}
-
-.dark-mode-label {
-  padding: 8px;
-}
-
-@media (max-width: 320px) {
-  .hero .hero-left h1 {
-    font-size: 2.5rem;
-  }
-
-  .review-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  form {
-    width: 85%;
-  }
-
-  .review-card {
-    max-width: 85%;
-  }
-
-  .review-card img {
-    width: 90px;
-  }
-}
-
 @media (max-width: 768px) {
   .navbar nav {
     display: none;
@@ -295,14 +200,14 @@ body {
     align-items: center;
   }
 
-  .review-form form {
-    width: 100%;
-    padding: 0.5rem;
-  }
-
   .review-card {
     max-width: 80%;
     flex-direction: row;
+  }
+
+  .review-form form {
+    width: 100%;
+    padding: 0.5rem;
   }
 
   .review-card img {
@@ -318,6 +223,78 @@ body {
   .menu-toggle {
     display: none;
   }
+}
+
+/* for watchlist buttons default */
+
+.toggle-btn-label::after {
+  content: "+";
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #fff7eb;
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(135deg, orange, orangered, orangered);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.4rem;
+}
+
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ff9800;
+  border-radius: 5px;
+}
+
+.dark-mode-label:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ff9800;
+  border-radius: 5px;
+}
+
+.dark-mode-label::after {
+  /* content: "🌙"; */
+  content: "Dark";
+}
+
+#toggle-dark-mode:checked + .dark-mode-label::after {
+  /* content: "☀️"; */
+  content: "Light";
+}
+
+.menu-toggle,
+.toggle-dark-mode {
+  display: none;
+}
+
+.dark-mode-label {
+  padding: 8px;
 }
 
 /* Hero section */
@@ -815,7 +792,7 @@ form {
 }
 
 .review-form button {
-  width: 45%;
+  width: 50%;
   height: 40px;
   margin: 1rem;
   border-radius: 18px;

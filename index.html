@@ -1,67 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Healthcare Emergency Dashboard</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-  <!-- Header Search -->
-  <header>
-    <div class="menu"><span>&#9776;</span></div>
-    <input type="search" placeholder="Search Medicine" class="search-bar"/>
-    <div class="profile"><span>&#128100;</span></div>
-  </header>
-
-  <!-- Emergency Section -->
-  <section class="emergency">
-    <div class="emergency-label">EMERGENCY</div>
-    <div class="emergency-actions">
-      <button class="btn ambulance" onclick="call('ambulance')">
-        <span class="icon">&#128222;</span>
-        Call<br/>An Ambulance
-      </button>
-      <button class="btn doctor" onclick="call('doctor')">
-        <span class="icon">&#129658;</span>
-        Call<br/>A Doctor
-      </button>
-    </div>
-  </section>
-
-  <!-- Latest Info Section -->
-  <section class="latest-info">
-    <div class="info-heading">Latest Info</div>
-    <div class="info-actions">
-      <div class="info-btn" onclick="inquire('medicine')">
-        <span class="icon">&#128138;</span><br/>
-        Inquire<br/>medicine
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Healthcare Emergency Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Search -->
+    <header>
+      <!-- <div class="menu-button">
+        <div class="menu"><span>&#9776;</span></div>
       </div>
-      <div class="info-btn" onclick="inquire('bed')">
-        <span class="icon">&#128719;</span><br/>
-        Inquire<br/>empty bed
+      <input type="search" placeholder="Search Medicine" class="search-bar" />
+      <div class="menu-button">
+        <div class="profile"><span>&#128100;</span></div>
+      </div> -->
+
+      <div class="top-bar">
+        <div class="menu-btn round-btn">≡</div>
+        <input type="text" placeholder="Search Medicine" />
+        <div class="right-btn-grp">
+          <div class="lang-btn round-btn">EN</div>
+          <div class="offer-btn round-btn">%</div>
+        </div>
       </div>
-      <div class="info-btn" onclick="inquire('appointment')">
-        <span class="icon">&#128197;</span><br/>
-        specialist<br/>Appointment
+    </header>
+
+    <!-- Emergency Section -->
+    <section class="emergency">
+      <div class="emergency-label">EMERGENCY</div>
+      <div class="emergency-actions">
+        <button class="btn ambulance" onclick="call('ambulance')">
+          <span class="icon">&#128222;</span>
+          Call<br />An Ambulance
+        </button>
+        <button class="btn doctor" onclick="call('doctor')">
+          <span class="icon">&#129658;</span>
+          Call<br />A Doctor
+        </button>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Slideshow -->
-  <section class="slideshow">
-    <div class="slide-label">Slide show</div>
-  </section>
+    <!-- Latest Info Section -->
+    <section class="latest-info">
+      <div class="info-heading">Latest Info</div>
+      <div class="info-actions">
+        <div class="info-btn" onclick="inquire('medicine')">
+          <span class="icon">&#128138;</span><br />
+          Inquire<br />medicine
+        </div>
+        <div class="info-btn" onclick="inquire('bed')">
+          <span class="icon">&#128719;</span><br />
+          Inquire<br />empty bed
+        </div>
+        <div class="info-btn" onclick="inquire('appointment')">
+          <span class="icon">&#128197;</span><br />
+          specialist<br />Appointment
+        </div>
+      </div>
+    </section>
 
-  <!-- Bottom Navigation -->
-  <nav class="bottom-nav">
-    <div><span class="nav-icon">&#127968;</span><div>Home</div></div>
-    <div><span class="nav-icon">&#128172;</span><div>Chat</div></div>
-    <div><span class="nav-icon">&#128138;</span><div>Medicine</div></div>
-    <div><span class="nav-icon">&#9881;</span><div>Settings</div></div>
-  </nav>
+    <!-- Slideshow -->
+    <section class="slideshow">
+      <div class="slide-label">Slide show</div>
+    </section>
 
-  <script src="script.js"></script>
-</body>
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <div>
+        <span class="nav-icon">&#127968;</span>
+        <div>Home</div>
+      </div>
+      <div>
+        <span class="nav-icon">&#128172;</span>
+        <div>Chat</div>
+      </div>
+      <div>
+        <span class="nav-icon">&#128138;</span>
+        <div>Medicine</div>
+      </div>
+      <div>
+        <span class="nav-icon">&#9881;</span>
+        <div>Settings</div>
+      </div>
+    </nav>
+
+    <script src="script.js"></script>
+  </body>
 </html>

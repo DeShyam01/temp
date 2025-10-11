@@ -1,9 +1,9 @@
 const CACHE_NAME = 'offline-notes-cache-v1';
 const FILES_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/app.js'
+  './',
+  './index.html',
+  './style.css',
+  './app.js'
 ];
 
 // Install Service Worker and cache files
@@ -25,3 +25,4 @@ self.addEventListener('fetch', event => {
     })
   );
 });
+
